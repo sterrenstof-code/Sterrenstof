@@ -710,10 +710,181 @@ color: rgba(0,0,0,0.1);
       }
 
       .extreemRechts, .uitlegCardsOne, .uitlegCardsTwo, .uitlegCardsThree, .one, .two, .three, .uitleg-bg, .uitleg-bg-two, .uitleg-bg-three, .uitlegProjects,  .close, .infoOne, .infoTwo, .infoThree {
-        display: none !important;
+        display: none;
+      }
+
+
+      
+      section {
+        display: block;
+        width: 100vw;
+        background-color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      .one-bg, .two-bg, .three-bg {
+        display: block;
+        background-image: none;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .one-mobile {
+        display: block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-image: url(parfum.jpg);
+        background-position: top 50% left 60%;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+      }
+
+      .two-mobile {
+        display: block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-image: url(IMG_6013kopie.jpg);
+        background-position: top 50% left 60%;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+      }
+
+      .three-mobile {
+        display: block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-image: url(seven.jpg);
+        background-position: top 50% left 60%;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+      }
+
+      .uitleg-bg {
+        display: block;
+        font-family: Georgia, 'Times New Roman', Times, serif !important;
+        background-color: white;
+        width: 80vw;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        z-index: 1;
       }
 
       
+      .uitleg-bg p:nth-child(1) {
+        align-self: flex-start;
+        text-transform: uppercase;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 2% 0 5% 5%;
+        border-left: 1px solid red;
+        font-size: 18px;
+      }
+
+      .uitleg-bg h1 {
+        text-transform: uppercase;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 0 0 1rem;
+        margin: 0 auto;
+        font-size: 54px;
+        letter-spacing: 0.2rem;
+        font-weight: 400;
+      }
+
+      .uitleg-bg p:nth-child(3) {
+        font-family: 'Times New Roman', Times, serif;
+        padding: 2rem;
+        font-size: 24px;
+      }
+
+      .uitleg-bg p:nth-child(4){
+  
+        font-family: 'Times New Roman', Times, serif;
+        padding-bottom:  1rem;
+        font-size: 24px;
+      }
+
+      .uitleg-bg p:nth-child(5){
+        align-self: flex-end;
+        justify-self: flex-end;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      .uitleg-bg p:nth-child(6){
+        align-self: flex-end;
+        justify-self: flex-end;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      
+
+      .uitleg-bg a{
+
+        align-self: flex-start;
+        text-transform: uppercase;
+        color: rgba(255, 0, 0, 0.589);
+        text-decoration: underline;
+        font-size: 24px;
+        padding: 1.5rem;
+        font-family: 'Times New Roman', Times, serif !important;
+      }
+
+      .uitlegCardsOne, .uitlegCardsTwo, .uitlegCardsThree {
+        display: none;
+      }
+
+  
+      .extreemRechts, .uitlegProjects, .card, .close, .client, .infoOne, .infoTwo, .infoThree {
+        display: none;
+      }
+  
+.container {
+  padding: 1em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+blockquote {
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 2em 1em 1.5em;
+  margin: 1em 0;
+  position: relative;
+  font-size: 24px;
+}
+blockquote:before {
+  font-family: 'Times New Roman', Times, serif;
+  content: '\201C';
+  position: absolute;
+ 
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: #666;
+  text-align: center;
+}
+blockquote:after {
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 1em ;
+  content: "\2013 \2003" attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: #e74c3c;
+}
       
 
 
