@@ -772,6 +772,7 @@ color: rgba(0,0,0,0.1);
         font-family: Georgia, 'Times New Roman', Times, serif !important;
         background-color: white;
         width: 80vw;
+      max-height: 90%;
         padding: 1rem;
         display: flex;
         flex-direction: column;
@@ -786,7 +787,7 @@ color: rgba(0,0,0,0.1);
         font-family: 'Times New Roman', Times, serif;
         padding: 2% 0 5% 5%;
         border-left: 1px solid red;
-        font-size: 18px;
+        font-size: 14px;
       }
 
       .uitleg-bg h1 {
@@ -794,7 +795,7 @@ color: rgba(0,0,0,0.1);
         font-family: 'Times New Roman', Times, serif;
         padding: 0 0 1rem;
         margin: 0 auto;
-        font-size: 54px;
+        font-size: 48px;
         letter-spacing: 0.2rem;
         font-weight: 400;
       }
@@ -802,14 +803,14 @@ color: rgba(0,0,0,0.1);
       .uitleg-bg p:nth-child(3) {
         font-family: 'Times New Roman', Times, serif;
         padding: 2rem;
-        font-size: 24px;
+        font-size: 18px;
       }
 
       .uitleg-bg p:nth-child(4){
   
         font-family: 'Times New Roman', Times, serif;
         padding-bottom:  1rem;
-        font-size: 24px;
+        font-size: 18px;
       }
 
       .uitleg-bg p:nth-child(5){
@@ -831,7 +832,7 @@ color: rgba(0,0,0,0.1);
         text-transform: uppercase;
         color: rgba(255, 0, 0, 0.589);
         text-decoration: underline;
-        font-size: 24px;
+        font-size: 18px;
         padding: 1.5rem;
         font-family: 'Times New Roman', Times, serif !important;
       }
@@ -859,7 +860,7 @@ blockquote {
   padding: 2em 1em 1.5em;
   margin: 1em 0;
   position: relative;
-  font-size: 24px;
+  font-size: 18px;
 }
 blockquote:before {
   font-family: 'Times New Roman', Times, serif;
