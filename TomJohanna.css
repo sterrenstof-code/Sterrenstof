@@ -778,11 +778,14 @@ color: rgba(0,0,0,0.1);
         flex-direction: column;
         align-items: stretch;
         z-index: 1;
+        justify-content: center;
+        align-items: center;
       }
 
       
       .uitleg-bg p:nth-child(1) {
         align-self: flex-start;
+        display: block;
         text-transform: uppercase;
         font-family: 'Times New Roman', Times, serif;
         padding: 2% 0 5% 5%;
@@ -885,8 +888,7 @@ blockquote:after {
   text-align: right;
   font-size: 0.875em;
   color: #e74c3c;
-}
-      
+}     
 
 
   }
