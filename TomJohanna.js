@@ -161,6 +161,57 @@ function slidingRight() {
   infoOne.style.display = "block";
 }
 
+
+const aboutBtn = document.querySelector('#aboutButton');
+const aboutMeDiv= document.querySelector('.aboutMe-div');
+
+const sterrenstofBtn = document.querySelector('#sterrenstof');
+const aboutSterrenstofDiv= document.querySelector('.aboutSterrenstof-div');
+
+const impressumBtn = document.querySelector('#impressum');
+const impressumDiv= document.querySelector('.impressum-div');
+
+
+impressumBtn.addEventListener("click", function(){
+  fadingLogo(),
+  slidingLeft(),
+  impressumDiv.style.display = "flex",
+  aboutSterrenstofDiv.style.display = "none",
+  aboutMeDiv.style.display = "none",
+  infoOne.style.display = "none",
+  infoTwo.style.display = "none",
+  infoThree.style.display = "none",
+  since.style.display = "none",
+  kruis.style.display = "block"
+});
+
+sterrenstofBtn.addEventListener("click", function(){
+  fadingLogo(),
+  slidingLeft(),
+  aboutSterrenstofDiv.style.display = "flex";
+  aboutMeDiv.style.display = "none";
+  infoOne.style.display = "none",
+  infoTwo.style.display = "none",
+  infoThree.style.display = "none",
+  impressumDiv.style.display = "none",
+  since.style.display = "none",
+  kruis.style.display = "block"
+});
+
+aboutBtn.addEventListener("click", function(){
+  fadingLogo(),
+  slidingLeft(),
+  aboutMeDiv.style.display = "flex";
+  aboutSterrenstofDiv.style.display = "none";
+  infoOne.style.display = "none",
+  infoTwo.style.display = "none",
+  infoThree.style.display = "none",
+  impressumDiv.style.display = "none";
+  since.style.display = "none",
+  kruis.style.display = "block"
+});
+
+
 one.addEventListener("click", function(){
   one.style.position = "absolute",
   one.style.bottom = "55%",
@@ -168,9 +219,12 @@ one.addEventListener("click", function(){
   uitlegCardsOne.style.bottom = "45%",
   fadingLogo(),
   slidingLeft(),
-  infoOne.style.display = "block",
+  aboutMeDiv.style.display = "none";
+  aboutSterrenstofDiv.style.display = "none";
+  infoOne.style.display = "flex",
   infoTwo.style.display = "none",
   infoThree.style.display = "none",
+  impressumDiv.style.display = "none";
   since.style.display = "none",
   kruis.style.display = "block"
 });
@@ -184,8 +238,11 @@ two.addEventListener("click", function(){
   uitlegCardsTwo.style.bottom = "45%",
   fadingLogo(),
   slidingLeft(),
+  aboutMeDiv.style.display = "none";
+  aboutSterrenstofDiv.style.display = "none";
   infoOne.style.display = "none",
-  infoTwo.style.display = "block",
+  impressumDiv.style.display = "none";
+  infoTwo.style.display = "flex",
   since.style.display = "none",
   infoThree.style.display = "none",
   kruis.style.display = "block"
@@ -198,10 +255,13 @@ three.addEventListener("click", function(){
   uitlegCardsThree.style.bottom = "45%",
   fadingLogo(),
   slidingLeft(),
+  aboutMeDiv.style.display = "none";
+  aboutSterrenstofDiv.style.display = "none";
   infoOne.style.display = "none",
   infoTwo.style.display = "none",
+  impressumDiv.style.display = "none";
   since.style.display = "none",
-  infoThree.style.display = "block",
+  infoThree.style.display = "flex",
   kruis.style.display = "block"
 });
 
@@ -218,11 +278,23 @@ three.addEventListener("click", function(){
     infoThree.style.display = "none";
     logo.classList.remove('fade');
     kruis.style.display ="none";
+    one.style.position = "absolute",
+    one.style.bottom = "20%",
+    two.style.position = "absolute",
+    two.style.bottom = "20%",
+    three.style.position = "absolute",
+    three.style.bottom = "20%",
+    aboutMeDiv.style.display = "none";
+    aboutSterrenstofDiv.style.display = "none";
+    impressumDiv.style.display = "none";
+    uitlegCardsOne.style.position = "absolute",
+    uitlegCardsOne.style.bottom = "10%",
+    uitlegCardsTwo.style.position = "absolute",
+    uitlegCardsTwo.style.bottom = "10%",
+    uitlegCardsThree.style.position = "absolute",
+    uitlegCardsThree.style.bottom = "10%"
     //location = location
 });
-
-
-
 
 //background image
 /*
@@ -254,4 +326,6 @@ document.querySelector(".hTest").style.backgroundImage = "url("+ randomimage +")
 }
 */
 //centering elements that are clicked upon
+
+//about Me info
 

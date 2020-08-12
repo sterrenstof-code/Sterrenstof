@@ -282,7 +282,7 @@ section {
 }
 
 .two-bg {
-  background-image: url(IMG_6013kopie.JPG);
+  background-image: url(blad.JPG);
   background-position: left 50% top 20%;
  
 }
@@ -356,6 +356,11 @@ section {
   color: black !important;
 }
 
+
+#aboutButton, #sterrenstof, #impressum {
+  cursor: pointer;
+}
+
 .h1{
   text-align: right !important;
   display: block;
@@ -413,9 +418,10 @@ section {
   padding: 0.5rem 0;
 }
 
-
-
-#infoOne, #infoTwo, #infoThree  {
+.aboutMe-div, .aboutSterrenstof-div, .impressum-div {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: 'Open-Sans', sans-serif;
   letter-spacing: 0.03rem;
   position: fixed;
@@ -425,13 +431,58 @@ section {
   height: 100vh;
   display: none;
   color: black;
-  padding: 15% 12%;
+  padding:10%;
   text-align: left;
   transition: all 1.5s;
   -webkit-transition: all 1.5s;
   -moz-transition: all 1.5s;
   -ms-transition: all 1.5s;
   -o-transition: all 1.5s;
+  transform: translateX(0%);
+  -webkit-animation: anim 3.5s ;
+  animation: anim 3.5s 1;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+}
+
+.aboutMe-div a, .aboutSterrenstof-div a{
+  align-self: flex-start;
+  margin-top: 1rem;
+  padding: 0.5rem 3rem;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.356);
+  background-color: rgb(122, 121, 96);
+}
+
+
+.aboutMe-div a:hover, .aboutSterrenstof-div a:hover {
+  background-color: transparent;
+  color: black;
+}
+
+#infoOne, #infoTwo, #infoThree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open-Sans', sans-serif;
+  letter-spacing: 0.03rem;
+  position: fixed;
+  font-size: 16px;
+  left: 50%;
+  width: 50vw;
+  height: 100vh;
+  display: none;
+  color: black;
+  padding: 12%;
+  text-align: left;
+  transition: all 1.5s;
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
   transform: translateX(0%);
   -webkit-animation: anim 3.5s ;
   animation: anim 3.5s 1;
@@ -501,7 +552,6 @@ section {
   transform: rotate(-45deg);
 }
 
-
 .blockquote {
   padding: 5vh;
   position: relative;
@@ -534,7 +584,6 @@ color: rgba(0,0,0,0.1);
   height: 3px;
   width: 200px;
 }
-
 
 
 /* stars in logo */
@@ -634,6 +683,7 @@ color: rgba(0,0,0,0.1);
     .right {
       width: 100vw;
       position: relative;
+     
     }
 
     .uitlegTime {
@@ -746,7 +796,7 @@ color: rgba(0,0,0,0.1);
       .two-mobile {
         display: block;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-image: url(IMG_6013kopie.jpg);
+        background-image: url(blad.jpg);
         background-position: top 50% left 60%;
         background-size: cover;
         position: absolute;
@@ -1036,7 +1086,7 @@ blockquote:after {
 
       .two-mobile {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-image: url(IMG_6013kopie.jpg);
+        background-image: url(blad.jpg);
         background-position: top 50% left 60%;
         background-size: cover;
         position: absolute;
