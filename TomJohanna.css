@@ -282,7 +282,7 @@ section {
 }
 
 .two-bg {
-  background-image: url(blad.JPG);
+  background-image: url(bladbg.jpg);
   background-position: left 50% top 20%;
  
 }
@@ -796,7 +796,7 @@ color: rgba(0,0,0,0.1);
       .two-mobile {
         display: block;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-image: url(blad.jpg);
+        background-image: url(bladbg.jpg);
         background-position: top 50% left 60%;
         background-size: cover;
         position: absolute;
@@ -1086,7 +1086,7 @@ blockquote:after {
 
       .two-mobile {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-image: url(blad.jpg);
+        background-image: url(bladbg.jpg);
         background-position: top 50% left 60%;
         background-size: cover;
         position: absolute;
