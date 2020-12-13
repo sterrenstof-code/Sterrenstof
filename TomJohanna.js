@@ -1,72 +1,33 @@
 
-//halfletter
 
-jQuery(function($) {
-    var halfstyle_text, halfstyle_chars, $halfstyle_el, halfstyle_i, halfstyle_output, halfstyle_style;
+/*
+var timer = null;
+window.addEventListener('scroll', function() {
+    if(timer !== null) {
+        clearTimeout(timer);  
+        document.querySelector(".nstof").style.opacity = "0.1";
+    }
+    timer = setTimeout(function() {
+      document.querySelector(".nstof").style.opacity = "1";
+    }, 200);
+}, false);
 
-    // Iterate over all class occurrences
-    $('.textToHalfStyle').each(function(idx, halfstyle_el) {
-        $halfstyle_el = $(halfstyle_el);
-        halfstyle_style = $halfstyle_el.data('halfstyle') || 'hs-base';
-        halfstyle_text = $halfstyle_el.text();
-        halfstyle_chars = halfstyle_text.split('');
-
-        // Set the screen-reader text
-        $halfstyle_el.html('<span style="position: absolute !important;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);">' + halfstyle_text + '</span>');
-
-        // Reset output for appending
-        halfstyle_output = '';
-
-        // Iterate over all chars in the text
-        for (halfstyle_i = 0; halfstyle_i < halfstyle_chars.length; halfstyle_i++) {
-            // Create a styled element for each character and append to container
-            halfstyle_output += '<span aria-hidden="true" class="halfStyle ' + halfstyle_style + '" data-content="' + halfstyle_chars[halfstyle_i] + '">' + halfstyle_chars[halfstyle_i] + '</span>';
-        }
-        // Chrome 59 and above specific fix - Part 1 - Addresses a Chrome bug where Chrome fails to corectly render and repaint pseudo elements - I came up with this fix after many different tests.
-        var _applyChromeFix = !!window.chrome && !!navigator.appVersion.match(/.*Chrome\/([0-9\.]+)/) && parseInt(navigator.appVersion.match(/.*Chrome\/([0-9\.]+)/)[1], 10) >= 59;
-        if (_applyChromeFix) {
-            halfstyle_output += '<style>.halfStyle{}</style>';
-        }
-
-        // Write to DOM only once
-        $halfstyle_el.append(halfstyle_output);
-
-        // Chrome 59 and above specific fix - Part 2
-        if (_applyChromeFix) {
-            setTimeout(function(){
-                $halfstyle_el.find('style').remove();
-            }, 0);
-        }
-    });
-});
-
+*/
 // projects scrolldisplay
 
 
+var rellax = new Rellax('.rellax');
+
 const one = document.querySelector('.one');
 const uitlegCardsOne = document.querySelector('.uitlegCardsOne');
-
-
-let scrollAmountOne = 0;
-let oldscrollAmountOne = 0;
-window.addEventListener('scroll', function() {
-  const scrollTopOne = window.scrollY;
-    if (scrollTopOne + window.innerHeight > one.offsetTop) {
-      if (scrollTopOne > oldscrollAmountOne) {
-        scrollAmountOne--;  
-      } else if (scrollTopOne < oldscrollAmountOne) {
-        scrollAmountOne++;
-      }
-      one.style.transform = `translateY(${scrollAmountOne * 1}px)`;
-      uitlegCardsOne.style.transform = `translateY(${scrollAmountOne * 1}px)`;
-   
-    };  
-  oldscrollAmountOne = scrollTopOne;
-});
-
 const two = document.querySelector('.two');
 const uitlegCardsTwo = document.querySelector('.uitlegCardsTwo');
+const three = document.querySelector('.three');
+const uitlegCardsThree = document.querySelector('.uitlegCardsThree');
 
+
+
+/*
 
 let scrollAmountTwo = 0;
 let oldscrollAmountTwo = 0;
@@ -85,27 +46,7 @@ window.addEventListener('scroll', function() {
   oldscrollAmountTwo = scrollTop;
 });
 
-
-const three = document.querySelector('.three');
-const uitlegCardsThree = document.querySelector('.uitlegCardsThree');
-
-
-let scrollAmountThree = 0;
-let oldscrollAmountThree = 0;
-window.addEventListener('scroll', function() {
-  const scrollTop = window.scrollY;
-    if (scrollTop + window.innerHeight > three.offsetTop) {
-      if (scrollTop > oldscrollAmountThree) {
-        scrollAmountThree--;  
-      } else if (scrollTop < oldscrollAmountThree) {
-        scrollAmountThree++;
-      }
-      three.style.transform = `translateY(${scrollAmountThree * 1}px)`;
-      uitlegCardsThree.style.transform = `translateY(${scrollAmountOne * 1}px)`;
-
-    };  
-  oldscrollAmountThree = scrollTop;
-});
+*/
 
     //top background 
 
@@ -135,7 +76,7 @@ window.smoothScroll = function(target) {
 
     // center project and fade sterrenstof/ 
 
-const logo = document.querySelector(".logo");
+const logo = document.querySelector(".h1-titel");
 const right = document.querySelector(".right");
 const ster = document.querySelector(".logo a");
 const left = document.querySelector(".left")
@@ -145,9 +86,9 @@ const infoThree = document.querySelector("#infoThree");
 const kruis = document.querySelector(".close");
 const since = document.querySelector(".uitlegTime");
 
-
 function fadingLogo() {
   logo.classList.add('fade');
+  
 }
 
 function slidingLeft() {
@@ -173,7 +114,7 @@ const impressumDiv= document.querySelector('.impressum-div');
 
 
 impressumBtn.addEventListener("click", function(){
-  fadingLogo(),
+  fadingLogo()
   slidingLeft(),
   impressumDiv.style.display = "flex",
   aboutSterrenstofDiv.style.display = "none",
@@ -183,6 +124,7 @@ impressumBtn.addEventListener("click", function(){
   infoThree.style.display = "none",
   since.style.display = "none",
   kruis.style.display = "block"
+
 });
 
 sterrenstofBtn.addEventListener("click", function(){
@@ -213,56 +155,65 @@ aboutBtn.addEventListener("click", function(){
 
 
 one.addEventListener("click", function(){
+  two.classList.toggle('rellax');
   one.style.position = "absolute",
   one.style.bottom = "55%",
   uitlegCardsOne.style.position = "absolute",
   uitlegCardsOne.style.bottom = "45%",
-  fadingLogo(),
-  slidingLeft(),
-  aboutMeDiv.style.display = "none";
-  aboutSterrenstofDiv.style.display = "none";
-  infoOne.style.display = "flex",
   infoTwo.style.display = "none",
   infoThree.style.display = "none",
-  impressumDiv.style.display = "none";
-  since.style.display = "none",
-  kruis.style.display = "block"
+  impressumDiv.style.display = "none",
+  fadingLogo();
+  setTimeout(function(){ left.classList.add('slideOut');
+  right.classList.add('slideOut');
+  left.style.transform = "matrix(1, 0, 0, 1, -640, 0);"
+  infoOne.style.display = "flex",
+  kruis.style.display = "block"}, 700);
+  setTimeout(function(){ aboutMeDiv.style.display = "none";
+  aboutSterrenstofDiv.style.display = "none";}, 700);
+
 });
 
 
-
 two.addEventListener("click", function(){
+  two.classList.toggle('rellax');
   two.style.position = "absolute",
   two.style.bottom = "55%",
   uitlegCardsTwo.style.position = "absolute",
   uitlegCardsTwo.style.bottom = "45%",
-  fadingLogo(),
-  slidingLeft(),
-  aboutMeDiv.style.display = "none";
-  aboutSterrenstofDiv.style.display = "none";
   infoOne.style.display = "none",
   impressumDiv.style.display = "none";
-  infoTwo.style.display = "flex",
-  since.style.display = "none",
+  fadingLogo(),
   infoThree.style.display = "none",
-  kruis.style.display = "block"
+  setTimeout(function(){ left.classList.add('slideOut');
+  right.classList.add('slideOut');
+  left.style.transform = "matrix(1, 0, 0, 1, -640, 0);"
+  infoTwo.style.display = "flex",
+  kruis.style.display = "block"}, 700);
+  setTimeout(function(){ aboutMeDiv.style.display = "none";
+  aboutSterrenstofDiv.style.display = "none";}, 700);
 });
 
 three.addEventListener("click", function(){
+  three.classList.toggle('rellax');
   three.style.position = "absolute",
   three.style.bottom = "55%",
   uitlegCardsThree.style.position = "absolute",
   uitlegCardsThree.style.bottom = "45%",
   fadingLogo(),
-  slidingLeft(),
-  aboutMeDiv.style.display = "none";
-  aboutSterrenstofDiv.style.display = "none";
   infoOne.style.display = "none",
   infoTwo.style.display = "none",
   impressumDiv.style.display = "none";
-  since.style.display = "none",
+  setTimeout(function(){ left.classList.add('slideOut');
+  right.classList.add('slideOut');
+  left.style.transform = "matrix(1, 0, 0, 1, -640, 0);"
   infoThree.style.display = "flex",
-  kruis.style.display = "block"
+  kruis.style.display = "block"}, 700);
+  setTimeout(function(){ aboutMeDiv.style.display = "none";
+  aboutSterrenstofDiv.style.display = "none";}, 700);
+
+
+
 });
 
 // transform .left out of screen 
@@ -292,7 +243,8 @@ three.addEventListener("click", function(){
     uitlegCardsTwo.style.position = "absolute",
     uitlegCardsTwo.style.bottom = "10%",
     uitlegCardsThree.style.position = "absolute",
-    uitlegCardsThree.style.bottom = "10%"
+    uitlegCardsThree.style.bottom = "10%",
+    since.style.display = "block";
     //location = location
 });
 
