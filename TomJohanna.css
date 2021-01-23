@@ -9,7 +9,6 @@ html {
   border: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  color: black;
 }
 
 
@@ -188,14 +187,28 @@ html {
   align-content: top;
   list-style: none;
   text-decoration: none;
+  -webkit-animation: slide-in-right 0.7s cubic-bezier(.53,0,.25,.52)both;
+  animation: slide-in-right 0.7s cubic-bezier(.53,0,.25,.52) both; 
 }
 
 .skills, .about, .contact, .contactMe {
   list-style: none;
   text-decoration: none;
-  padding: 0 10vh 5vh 0;
+  padding: 0 7vh 7vh 0;
   -webkit-animation: slide-in-right 0.7s cubic-bezier(.53,0,.25,.52)both;
           animation: slide-in-right 0.7s cubic-bezier(.53,0,.25,.52) both;      
+}
+
+.aboutMe-div div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-skills {
+  flex: 1 1 33%;
+  padding: 0 5vh 5vh 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 .skills{
@@ -472,8 +485,6 @@ a {
   padding-left: 0.2%;
 }
 
-
-
 /* projects background */
 
 section {
@@ -514,14 +525,13 @@ section {
 }
 
 .card {
-  border: 1px solid rgba(246, 242, 230, 0.671);
-  box-shadow: 0px 0px 3px rgb(246, 242, 230);
   /*border: 10px solid blueviolet;
   */position: absolute;
-  right: 15%;
-  width: 70%;
-  left: 15%;
-  height: 25%;
+  background-position: center;
+  right: 1%;
+  width: 98%;
+  left: 1%;
+  height: 35%;
   z-index: 1;
   bottom: 20%;
   cursor: pointer;
@@ -530,6 +540,9 @@ section {
   -o-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
   -ms-transition: all 0.5s ease-in;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: center;
 }
 
 .card p {
@@ -537,10 +550,8 @@ section {
 }
 
 .one {
-  background-image: url(parfumsection.jpg);
-  background-position: center;
-  background-size: cover;
-  align-self: center;
+  background-image: url(yanji.png);
+ 
   z-index: 1;
 }
 
@@ -624,17 +635,13 @@ section {
 }
 
 .two {
-  background-image: url(yanji.jpg);
-  background-position: center;
-  background-size: cover;
-  align-self: center;
+  background-image: url(yanji2.png);
+  
   z-index: 300;
 }
 
 .three {
-  background-image: url(sterrenstof.jpg);
-  background-position: center;
-  background-size: cover;
+  background-image: url(sterrenstof.png);
   z-index: 3;
   -webkit-animation: slide-in-bottom 0.9s cubic-bezier(.53,0,.25,.52) both;
           animation: slide-in-bottom 0.9s cubic-bezier(.53,0,.25,.52) both;
@@ -675,12 +682,11 @@ section {
 
 .aboutMe-div, .aboutSterrenstof-div, .impressum-div {
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   letter-spacing: 0.03rem;
   position: fixed;
-  font-size: 2vh;
+  font-size: 14px;
   left: 50%;
   width: 50vw;
   height: 100vh;
@@ -699,7 +705,6 @@ section {
   -moz-transform: translateX(0%);
   -ms-transform: translateX(0%);
   -o-transform: translateX(0%);
-  text-align: justify;
   line-height: 1.6875;
 }
 
@@ -726,13 +731,13 @@ section {
   font-family: 'Open-Sans', sans-serif;
   letter-spacing: 0.03rem;
   position: fixed;
-  font-size: 16px;
+  font-size: 15px;
   left: 50%;
   width: 50vw;
   height: 100vh;
   display: none;
   color: black;
-  padding: 12%;
+  padding: 11%;
   text-align: justify;
   transition: all 1.5s;
   transform: translateX(0%);
@@ -961,11 +966,11 @@ color: rgba(0,0,0,0.1);
         -o-border-radius: 1%;
 }
     .three {
-      background-image: url(IMG_1279.PNG);
+      background-image: url(sterrenstof.png);
     }
 
     .one {
-      background-image: url(IMG_1280.PNG);
+      background-image: url(yanji.png);
     }
 
     .left, .right {
@@ -998,8 +1003,8 @@ color: rgba(0,0,0,0.1);
     }
 
     #infoOne, #infoTwo, #infoThree {
-      padding: 0 5% ;
-      font-size: 1.4vh;
+      padding: 0 8%;
+      font-size: 16px;
     }
 
     .uitlegTime, #verticalLine, .uitlegProjects, .vlOne {
@@ -1008,7 +1013,7 @@ color: rgba(0,0,0,0.1);
 
     .aboutMe-div, .aboutSterrenstof-div, .impressum-div {
       padding: 0 5%;
-      font-size: 1.4vh;
+      font-size: 15px;
     }
 
     .slideOut {
@@ -1042,11 +1047,11 @@ and (-webkit-min-device-pixel-ratio: 2)
     -o-border-radius: 1%;
 }
 .three {
-  background-image: url(IMG_1279.PNG);
+  background-image: url(sterrenstof.png);
 }
 
 .one {
-  background-image: url(IMG_1280.PNG);
+  background-image: url(yanji.png);
 }
 
 
@@ -1060,10 +1065,9 @@ and (-webkit-min-device-pixel-ratio: 2)
   .info {
     padding: 5vh 5vh;
     flex-direction: row;
-    flex-wrap: wrap;
     background-color: rgba(255, 0, 0, 0.048);
-    flex-direction: column;
-    font-size: 14px;
+    font-size: 12px;
+    justify-content: space-evenly;
   }
 
   .skills, .about, .contact, .contactMe {
@@ -1095,7 +1099,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 
   .aboutMe-div, .aboutSterrenstof-div, .impressum-div {
     padding: 0 5vh;
-    font-size: 22px;
+    font-size: 14px;
   }
 
   .impressum-div {
@@ -1103,7 +1107,7 @@ and (-webkit-min-device-pixel-ratio: 2)
   }
 
   #infoOne, #infoTwo, #infoThree {
-    font-size: 22px;
+    font-size: 16px;
     padding: 8%;
   }
   
@@ -1117,7 +1121,7 @@ and (-webkit-min-device-pixel-ratio: 2)
   and (-webkit-min-device-pixel-ratio: 2)
    { 
 
-    .uitlegTime {
+    .uitlegTime, .columnTwo {
       display: none;
     }
     .overlay {
@@ -1151,7 +1155,7 @@ and (-webkit-min-device-pixel-ratio: 2)
       font-size: 8px;
       overflow: hidden;
       flex-direction: row !important;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
       padding: 1rem !important;
       height: 40vh;
@@ -1200,17 +1204,31 @@ and (-webkit-min-device-pixel-ratio: 2)
     .mobile {
       position: relative;
       top: 100vh;
+      color: white;
+    }
+
+    .mobile p {
+      color: white;
     }
       
       .mobile-about {
         width: 100vw;
-        padding: 2rem 0 8rem 0;
-        background-color: white;
-        
+        min-height: 600px;
+        padding: 2rem 0;
+        background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.13),
+        rgba(0, 0, 0, 0.13)
+      ),
+      url(NGC_3114.png);
+  background-size: cover;    
       }
 
       .mobile-title {
-        text-align: center;
+        color: white; 
+        z-index: 2;
+        position: relative;
+        text-align: left;
        font-weight: bold;
         font-size: 34px;
       text-transform: uppercase;
@@ -1218,29 +1236,47 @@ and (-webkit-min-device-pixel-ratio: 2)
       }
 
       .mobile-text {
+        color: white; 
+        z-index: 2;
+        position: relative;
         text-align: left;
         padding: 0.5rem 1rem;
       }
 
+      .mobile-about p, .project-text a {
+        color: white; 
+      }
+
       .mobile-projects {
-        min-height: 60vh;
+        width: 100vw;
+        min-height: 600px;
+        padding: 2rem 0 2rem 0;
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.13),
+          rgba(0, 0, 0, 0.082)
+        ),
+        url(bladbg.jpg);
+        background-size: cover;
+        background-position: center;   
         margin: 0 auto;
-        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
 
-      .project-text {
+      .project-text, .mobile-text {
         text-align: left;
-        padding: 2rem 5vw 4rem 5vw;
+        padding: 2rem 5vw;
       }
 
-      .project-text-text {
+      .project-text-text{
         text-align: left;
         padding: 2rem 0;
       }
 
+      .mobile-text p {
+        padding: 0.5rem 0;
+      }
 
       .mobile-image {
         z-index: 0;
@@ -1260,15 +1296,19 @@ and (-webkit-min-device-pixel-ratio: 2)
         width: 90vw;
       }
 
-      .project-text a {
+      .project-text a, .mobile a {
         text-align: center;
         text-transform: uppercase;
-        color: black;
         font-weight: bold;
         display: inline-block;
         width: 90vw;
         padding: .5rem 1rem;
         border: 1px solid rgba(0, 0, 0, 0.322);
+      }
+
+      .mobile-text a {
+        margin: 2rem 0;
+        color: white;
       }
 
       .project-text a:hover {
@@ -1289,15 +1329,27 @@ and (-webkit-min-device-pixel-ratio: 2)
       }
 
       .sterrenstof  .mobile-image {
-        background-image: url(seven.jpg);
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.13),
+          rgba(0, 0, 0, 0.082)
+        ),
+        url(parfum.jpg);
       }
 
       .veryas {
-        
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.13),
+          rgba(0, 0, 0, 0.082)
+        ),
+        url(parfum.jpg);
       }
 
       .sterrenstof {
-        
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.13),
+          rgba(0, 0, 0, 0.082)
+        ),
+        url(seven.jpg);
       }
 
 
@@ -1415,6 +1467,10 @@ and (-webkit-min-device-pixel-ratio: 2)
   .h1-titel {
     display: flex;
   }
+
+  .mobile {
+    display: none;
+  }
  }
     /* Big Screens */
 
@@ -1449,6 +1505,9 @@ and (-webkit-min-device-pixel-ratio: 2)
       -ms-transform: translateX(-55vw)   ;
       -o-transform: translateX(-55vw)   ;
 }
+.mobile {
+  display: none;
+}
   }
 
 
@@ -1463,5 +1522,8 @@ and (-webkit-min-device-pixel-ratio: 2)
       -moz-transform: translateX(-55vw)   ;
       -ms-transform: translateX(-55vw)   ;
       -o-transform: translateX(-55vw)   ;
+}
+.mobile {
+  display: none;
 }
   } 

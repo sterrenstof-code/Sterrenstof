@@ -102,13 +102,8 @@ function slidingRight() {
   infoOne.style.display = "block";
 }
 
-
 const aboutBtn = document.querySelector('#aboutButton');
 const aboutMeDiv= document.querySelector('.aboutMe-div');
-
-const sterrenstofBtn = document.querySelector('#sterrenstof');
-const aboutSterrenstofDiv= document.querySelector('.aboutSterrenstof-div');
-
 const impressumBtn = document.querySelector('#impressum');
 const impressumDiv= document.querySelector('.impressum-div');
 
@@ -117,7 +112,7 @@ impressumBtn.addEventListener("click", function(){
   fadingLogo()
   slidingLeft(),
   impressumDiv.style.display = "flex",
-  aboutSterrenstofDiv.style.display = "none",
+ 
   aboutMeDiv.style.display = "none",
   infoOne.style.display = "none",
   infoTwo.style.display = "none",
@@ -127,24 +122,11 @@ impressumBtn.addEventListener("click", function(){
 
 });
 
-sterrenstofBtn.addEventListener("click", function(){
-  fadingLogo(),
-  slidingLeft(),
-  aboutSterrenstofDiv.style.display = "flex";
-  aboutMeDiv.style.display = "none";
-  infoOne.style.display = "none",
-  infoTwo.style.display = "none",
-  infoThree.style.display = "none",
-  impressumDiv.style.display = "none",
-  since.style.display = "none",
-  kruis.style.display = "block"
-});
-
 aboutBtn.addEventListener("click", function(){
   fadingLogo(),
   slidingLeft(),
   aboutMeDiv.style.display = "flex";
-  aboutSterrenstofDiv.style.display = "none";
+
   infoOne.style.display = "none",
   infoTwo.style.display = "none",
   infoThree.style.display = "none",
@@ -170,7 +152,7 @@ one.addEventListener("click", function(){
   infoOne.style.display = "flex",
   kruis.style.display = "block"}, 700);
   setTimeout(function(){ aboutMeDiv.style.display = "none";
-  aboutSterrenstofDiv.style.display = "none";}, 700);
+  }, 700);
 
 });
 
@@ -190,8 +172,7 @@ two.addEventListener("click", function(){
   left.style.transform = "matrix(1, 0, 0, 1, -640, 0);"
   infoTwo.style.display = "flex",
   kruis.style.display = "block"}, 700);
-  setTimeout(function(){ aboutMeDiv.style.display = "none";
-  aboutSterrenstofDiv.style.display = "none";}, 700);
+  setTimeout(function(){ aboutMeDiv.style.display = "none";}, 700);
 });
 
 three.addEventListener("click", function(){
@@ -209,8 +190,7 @@ three.addEventListener("click", function(){
   left.style.transform = "matrix(1, 0, 0, 1, -640, 0);"
   infoThree.style.display = "flex",
   kruis.style.display = "block"}, 700);
-  setTimeout(function(){ aboutMeDiv.style.display = "none";
-  aboutSterrenstofDiv.style.display = "none";}, 700);
+  setTimeout(function(){ aboutMeDiv.style.display = "none";}, 700);
 
 
 
@@ -236,7 +216,6 @@ three.addEventListener("click", function(){
     three.style.position = "absolute",
     three.style.bottom = "20%",
     aboutMeDiv.style.display = "none";
-    aboutSterrenstofDiv.style.display = "none";
     impressumDiv.style.display = "none";
     uitlegCardsOne.style.position = "absolute",
     uitlegCardsOne.style.bottom = "10%",
